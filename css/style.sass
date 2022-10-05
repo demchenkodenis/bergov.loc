@@ -1,0 +1,403 @@
+body
+    overflow-x: hidden
+
+.mask
+    background: url('../img/mask.jpeg')
+    background-repeat:repeat-x
+    background-position: center
+    color: transparent
+    -webkit-font-smoothing: antialiased
+    -webkit-background-clip: text
+    -moz-background-clip: text
+    background-clip: text
+    -webkit-text-fill-color: transparent
+
+.container
+    max-width: 1170px
+    margin: 0 auto
+
+// header
+header
+    max-height: 700px
+    background: url('../img/bg-main.jpeg') no-repeat
+    background-size: cover
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 97%
+        background: linear-gradient(180.33deg, rgba(0, 0, 0, 0.45) 14.06%, rgba(0, 0, 0, 0.25) 99.78%)
+    &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 28%
+        height: 100%
+        background: #fff
+    .container
+        display: grid
+        grid-template-columns: 300px 1fr
+        z-index: 10
+        position: relative
+        &::after
+            width: 150%
+            content: ''
+            display: block
+            height: 30px
+            background: #fff
+            bottom: 0
+            left: 0
+            position: absolute
+        .logo
+            width: calc(100% + 30px)
+            padding-top: 40px
+            transform: translateX(-30px)
+            background: #fff
+        ul.contacts
+            display: flex
+            justify-content: flex-end
+            margin-right: -50px
+            padding-top: 40px
+            li  
+                a
+                    color: #fff
+                    text-decoration: none
+                    font-size: 20px
+                &:first-child
+                    margin-right: 60px
+                    a
+                        font-size: 18px
+        nav 
+            position: relative
+            z-index: 10
+            padding-top: 60px
+            background: #fff
+            ul
+                li
+                    &:last-child
+                        position: relative
+                        height: 166px
+                        img
+                            position: absolute
+                            left: -50px
+                        a
+                            position: absolute
+                            top: 150px
+                            left: 170px
+                            text-align: center
+                    margin-bottom: 30px
+                    span
+                        display: block
+                        transform: translateX(-25px)
+                        color: #6BC067
+                        font-size: 11px
+                        font-family: semibold
+                    a
+                        text-decoration: none
+                        color: #000
+                        font-family: semibold
+                        font-size: 18px
+                        line-height: 20px
+                        letter-spacing: -0.01em
+        div
+            &:not(.logo)
+                display: flex
+                align-items: flex-end
+                flex-direction: column
+                padding-right: 160px
+            h1  
+                margin-bottom: 40px
+                font-family: 'font-regular'
+                font-size: 56px
+                text-align: right
+                color: #fff
+            p
+                max-width: 488px
+                margin-bottom: 60px
+                font-size: 18px
+                color: #fff
+                text-align: right
+                letter-spacing: -0.01em
+                line-height: 26px
+            a
+                color: #fff
+                text-decoration: none
+                font-size: 16px
+                svg
+                    margin-left: 30px
+
+// section about
+#about
+    position: relative
+    margin-top: 150px
+    img
+        position: absolute
+        top: -50px
+        right: 0
+    .container
+        h2  
+            margin-bottom: 42px
+            font-size: 56px
+            line-height: 58px
+            letter-spacing: -0.01em
+            color: #272727
+        p
+            margin-bottom: 24px
+            max-width: 500px
+            font-size: 16px
+            line-height: 25px
+            letter-spacing: -0.01em
+            color: #000000
+        a
+            color: #6ED669
+            font-size: 16px
+            line-height: 18px
+            letter-spacing: -0.01em
+            text-decoration: none
+            svg
+                margin-left: 30px
+
+// section stat
+#stat
+    margin-top: 50px
+    .container
+        display: grid
+        grid-template-columns: 1fr 1fr 200px
+        div
+            p.font-semibold
+                font-size: 14px
+            p
+                span.text-100
+                    font-size: 100px
+            p
+                span.text-36
+                    font-size: 36px
+                    color: #545454
+
+//section descript
+#descript
+    margin-top: 60px
+    background: #fbfbfb
+    display: grid
+    grid-template-columns: 1fr 1fr
+    .bg-descript
+        background: url(../img/bg-description.jpg)
+        background-size: cover
+        img
+            visibility: hidden
+    .descript-text
+        max-width: 500px
+        padding: 80px 0 48px 52px
+        h2
+            margin-bottom: 50px
+            font-size: 42px
+            line-height: 50px
+            letter-spacing: -0.01em
+        h2 + p
+            margin-bottom: 30px
+        p + p
+            margin-bottom: 80px
+        p   
+            font-size: 14px
+            line-height: 21px
+            letter-spacing: -0.01em
+        a
+            font-size: 16px
+            line-height: 18px
+            letter-spacing: -0.01em
+            color: #6ED669
+            text-decoration: none
+            svg
+                margin-left: 30px
+
+//section infrastructure
+#infrastructure
+    background: url(../img/bg-infrastructure.jpg) no-repeat
+    background-size: cover
+    padding: 107px 0 113px
+    .container
+        h2
+            margin-bottom: 75px
+            font-size: 56px
+            line-height: 58px
+            letter-spacing: -0.01em
+        .tabs
+            display: flex
+            justify-content: center
+            div
+                margin-bottom: 75px
+                padding: 25px 75px
+                border-bottom: 1px solid #000 
+                text-align: center
+                font-weight: 500
+                font-size: 16px
+                line-height: 17px
+                letter-spacing: -0.01em
+                cursor: pointer
+                &:last-child
+            .not-active
+                border-bottom: 1px solid #aaa
+        .tabs-content
+            display: flex
+            justify-content: center
+            div
+                display: flex
+                &:last-child
+                    margin-right: 0
+                div
+                    width: 159px
+                    height: 152px
+                    margin-right: 24px
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    background: #fff
+                    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.11)
+                    border-radius: 12px
+                    img
+                        max-width: 40px
+                        margin-bottom: 40px
+                    p
+                        font-size: 14px
+                        line-height: 15px
+                        letter-spacing: -0.01em
+                    
+//section speech
+#speech
+    padding: 77px 0 91px
+    background: #6BC067
+    .container
+        display: flex
+        justify-content: center
+        align-items: center
+        img
+            margin-right: 88px
+        p
+            max-width: 578px
+            font-size: 18px
+            line-height: 32px
+            letter-spacing: -0.01em
+            color: #fff
+
+//section plan
+#plan
+    background: #f6f6f6
+    .container
+        position: relative
+        h2
+            position: absolute
+            top: 30px
+            right: 25px
+            font-size: 56px
+            line-height: 103.61%
+            text-align: right
+            letter-spacing: -0.01em
+            color: #202020
+
+        img
+            transform: translateX(-100px)
+        
+
+//section route
+#route
+    position: relative
+    img
+        position: absolute
+        top: 0
+        right: 0
+    .container
+        .route-text
+            padding-top: 50px
+            max-width: 543px
+            h2
+                margin-bottom: 40px
+                font-size: 56px
+                line-height: 58px
+                letter-spacing: -0.01em
+                color: #202020
+            p
+                margin-bottom: 25px
+                font-size: 16px
+                line-height: 24px
+                letter-spacing: -0.01em
+                color: #202020
+                &:last-child
+                    text-align: center
+                    span
+                        &:first-child
+                            display: block
+                            font-size: 148px
+                            line-height: 180px
+                            color: #6BC067
+                        &:last-child
+                            display: block
+
+//section slider
+.swiper-slide
+    opacity: .5
+.swiper-slide-visible
+    opacity: 1
+
+.swiper-button-prev
+    margin-left: 30px
+    &::after
+        display: none
+.swiper-button-next
+    margin-right: 30px
+    &::after
+        display: none
+
+#slider
+    margin-top: 38px
+    .swiper
+        height: 289px
+        .swiper-wrapper
+            
+            .swiper-slide
+                
+                img
+                    width: 350px
+                    max-width: 100%
+                            
+#map
+    width: 100%
+    height: 428px
+
+footer
+    padding: 50px 0 60px
+    background: #505050
+    .container
+        .logo
+            transform: translateX(-30px)
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .footer-nav
+            display: flex
+            justify-content: space-between
+            li
+                margin-right: 50px
+                &:last-child
+                    margin-right: 0
+                a
+                    color: #fff
+                    text-decoration: none
+                    font-size: 14px
+                    line-height: 16px
+                    letter-spacing: -0.01em
+        .footer-contacts
+            li
+                transform: translateX(10px)
+                &:first-child
+                    margin-bottom: 5px
+                a
+                    color: #fff
+                    text-decoration: none
+
+a
+    &:hover
+        text-decoration: underline !important
